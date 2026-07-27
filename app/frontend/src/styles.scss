@@ -1,0 +1,77 @@
+/* ============================================================
+   C4X AAC — global design tokens & shared utility classes
+   These are used by every component below; keep this file as
+   the single source of truth for palette, type and spacing.
+   ============================================================ */
+
+:root{
+  --bg:#F7F5F0;
+  --bg-alt:#EFEAE0;
+  --surface-dark:#2A2C2E;
+  --text:#232320;
+  --text-soft:#615E57;
+  --accent:#96690D;
+  --accent-dark:#151617;
+  --gold:#F3C24E;
+  --gold-soft:#F8D786;
+  --charcoal:#3D4042;
+  --sage:#96690D;
+  --line:#E2DCCC;
+  --white:#FFFFFF;
+  --radius:2px;
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  font-family:'Inter', sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+a{ color:inherit; text-decoration:none; }
+img, video{ max-width:100%; display:block; }
+h1,h2,h3{ font-family:'Space Grotesk', sans-serif; font-weight:700; letter-spacing:-0.01em; margin:0; }
+p{ margin:0; }
+
+.wrap{ max-width:1180px; margin:0 auto; padding:0 28px; }
+section{ padding:88px 0; }
+@media (max-width:720px){ section{ padding:56px 0; } }
+
+.eyebrow{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:12.5px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--accent);
+  display:flex; align-items:center; gap:10px;
+  margin-bottom:14px;
+}
+.eyebrow::before{ content:''; width:18px; height:2px; background:var(--accent); display:inline-block; }
+
+.cta-btn{
+  background:var(--charcoal); color:var(--white); font-weight:600; font-size:14px;
+  padding:11px 20px; border-radius:var(--radius); border:none; cursor:pointer;
+  display:inline-flex; align-items:center; gap:8px; transition:background .15s ease;
+}
+.cta-btn:hover{ background:var(--accent-dark); }
+
+.cta-ghost{
+  background:transparent; color:var(--charcoal); border:1.5px solid var(--charcoal);
+  font-weight:600; font-size:14px; padding:10px 20px; border-radius:var(--radius);
+  display:inline-flex; align-items:center; gap:8px;
+}
+.cta-ghost:hover{ border-color:var(--gold); color:var(--accent); background:var(--gold-soft); }
+
+/* Signature "coursing" divider — a running-bond brick motif used between
+   sections instead of a generic hairline rule. */
+.coursing{ width:100%; height:34px; overflow:hidden; background:var(--bg); }
+.coursing .row{ height:17px; display:flex; }
+.coursing .row span{ flex:0 0 64px; height:100%; border-right:2px solid var(--bg); background:var(--line); }
+.coursing .row.offset{ margin-left:-32px; }
+.coursing.dark{ background:var(--surface-dark); }
+.coursing.dark .row span{ background:#3A3D3F; border-right-color:var(--surface-dark); }
+
+.placeholder-note{ font-size:13px; color:var(--sage); font-family:'IBM Plex Mono'; }

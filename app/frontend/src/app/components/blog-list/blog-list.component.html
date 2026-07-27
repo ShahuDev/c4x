@@ -1,0 +1,25 @@
+<section class="blog-hero">
+  <div class="wrap">
+    <div class="eyebrow">C4X Blog</div>
+    <h1>Notes on AAC blocks, construction &amp; the plant.</h1>
+    <p>Guides, product notes and updates from Parshwanath C4X AAC Blocks.</p>
+  </div>
+</section>
+
+<section class="blog-grid-section">
+  <div class="wrap">
+    <div class="blog-grid">
+      <a class="blog-card" *ngFor="let post of posts" [routerLink]="['/blog', post.slug]">
+        <div class="cover"><img [src]="post.coverImage" [alt]="post.title" /></div>
+        <div class="body">
+          <div class="tags">
+            <span class="tag" *ngFor="let tag of post.tags">{{ tag }}</span>
+          </div>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt }}</p>
+          <div class="meta">{{ post.date | date:'MMM d, y' }} &middot; {{ post.author }}</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

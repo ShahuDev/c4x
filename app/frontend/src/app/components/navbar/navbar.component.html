@@ -1,0 +1,29 @@
+<header>
+  <nav class="wrap">
+      <a class="brand" routerLink="/">
+          <img src="assets/images/logo.png" alt="C4X AAC Blocks" class="logo">
+      </a>
+
+    <div class="navlinks" [class.show-mobile]="mobileOpen">
+      <a routerLink="/" fragment="about" (click)="closeMobile()">About</a>
+      <a routerLink="/" fragment="services" (click)="closeMobile()">Products</a>
+      <a routerLink="/" fragment="plant" (click)="closeMobile()">Plant</a>
+      <a routerLink="/blog" (click)="closeMobile()">Blogs</a>
+      <a routerLink="/" fragment="contact" (click)="closeMobile()">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+        <a
+                href="assets/brochure.pdf"
+                download="brochure.pdf"
+                class="cta-btn">
+
+            &#8595; Download Brochure
+
+        </a>
+      <button class="navtoggle" aria-label="Menu" (click)="toggleMobile()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>

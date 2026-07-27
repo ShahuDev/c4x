@@ -1,0 +1,19 @@
+.gallery-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:20px; margin-bottom:36px; flex-wrap:wrap; }
+.gallery-head h2{ font-size:clamp(28px,3.4vw,40px); max-width:560px; }
+.photo-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.photo-grid .ph{
+  aspect-ratio:4/3; position:relative; overflow:hidden; border-radius:2px;
+  background:
+    repeating-linear-gradient(0deg, #E9E4D8 0 22px, #DED8C7 22px 24px),
+    repeating-linear-gradient(90deg, transparent 0 62px, rgba(194,187,171,.6) 62px 64px);
+}
+.photo-grid .ph.has-img{ background:none; }
+.photo-grid .ph img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.photo-grid .ph:nth-child(2){ grid-row:span 2; aspect-ratio:auto; }
+.photo-grid .ph span{
+  position:absolute; left:14px; bottom:12px; right:14px; color:var(--white);
+  font-family:'IBM Plex Mono'; font-size:11.5px; text-shadow:0 1px 4px rgba(0,0,0,.5); z-index:1;
+}
+.photo-grid .ph::after{ content:''; position:absolute; inset:0; background:linear-gradient(0deg, rgba(35,35,32,.55), transparent 55%); }
+@media (max-width:860px){ .photo-grid{ grid-template-columns:repeat(2,1fr); } .photo-grid .ph:nth-child(2){ grid-row:auto; } }
+@media (max-width:560px){ .photo-grid{ grid-template-columns:1fr; } }

@@ -1,0 +1,48 @@
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="eyebrow">Products</div>
+    <h2>C4X AAC Blocks — click to see the full size range &amp; specs.</h2>
+
+    <div class="service-grid">
+      <div class="service-card" [class.open]="openCard === 'blocks'" (click)="toggle('blocks')">
+        <div class="row1">
+          <div>
+            <h3>C4X AAC Blocks</h3>
+            <p>Lightweight, high-strength autoclaved aerated concrete blocks in eight standard sizes. GST extra as applicable.</p>
+          </div>
+          <span class="plus"></span>
+        </div>
+        <div class="size-grid">
+          <div class="size-chip" *ngFor="let size of blockSizes">
+            <div class="brick" [style.width.px]="size.widthPx"></div>
+            <b>{{ size.label }}</b>
+            <span>{{ size.dims }}</span>
+            <em>{{ size.pricePerPiece }} / piece</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card" [class.open]="openCard === 'specs'" (click)="toggle('specs')">
+        <div class="row1">
+          <div>
+            <h3>Technical Specifications</h3>
+            <p>Engineering spec sheet for C4X AAC blocks — dimensions, density, strength and thermal performance.</p>
+          </div>
+          <span class="plus"></span>
+        </div>
+        <div class="spec-grid" *ngIf="openCard === 'specs'">
+          <div class="spec-row" *ngFor="let row of specRows">
+            <span>{{ row.label }}</span>
+            <b>{{ row.value }}</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="coursing">
+  <div class="row offset">
+    <span *ngFor="let i of [].constructor(15)"></span>
+  </div>
+</div>

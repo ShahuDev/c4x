@@ -1,0 +1,181 @@
+footer {
+  background: var(--surface-dark);
+  color: rgba(251, 250, 247, 0.65);
+  padding: 44px 0 26px;
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+/* ===========================
+   Top Section
+=========================== */
+
+.foot-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  border-bottom: 1px solid rgba(251, 250, 247, 0.12);
+  padding-bottom: 26px;
+  margin-bottom: 18px;
+}
+
+.foot-grid .brand {
+  color: var(--white);
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.4px;
+}
+
+.foot-grid div:last-child {
+  text-align: right;
+}
+
+.foot-address {
+  color: rgba(251, 250, 247, 0.75);
+  margin-bottom: 28px;
+}
+
+/* ===========================
+   ISO Certification
+=========================== */
+
+.footer-certification {
+  display: flex;
+  justify-content: center;
+  margin: 28px 0;
+}
+
+.cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  width: 100%;
+  max-width: 620px;
+
+  padding: 20px 24px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+
+  transition: all 0.3s ease;
+}
+
+.cert-badge:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.22);
+  transform: translateY(-3px);
+}
+
+/* Badge Image */
+
+.cert-icon {
+  width: 95px;
+  height: 95px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.cert-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Badge Text */
+
+.cert-content {
+  flex: 1;
+}
+
+.cert-content h4 {
+  margin: 0;
+  color: var(--white);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cert-content p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.cert-content span {
+  display: inline-block;
+  margin-top: 2px;
+
+  color: #d4af37;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* ===========================
+   Footer Bottom
+=========================== */
+
+.footer-bottom {
+  margin-top: 20px;
+  padding-top: 18px;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 768px) {
+
+  .foot-grid {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .foot-grid div:last-child {
+    text-align: left;
+  }
+
+  .footer-certification {
+    margin: 24px 0;
+  }
+
+  .cert-badge {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .cert-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cert-content h4 {
+    font-size: 17px;
+  }
+
+  .cert-content p {
+    font-size: 13px;
+  }
+
+  .cert-content span {
+    font-size: 12px;
+  }
+}

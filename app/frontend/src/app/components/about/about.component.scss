@@ -1,0 +1,87 @@
+.about-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:64px; align-items:start; }
+.about-grid h2{ font-size:clamp(28px,3.4vw,40px); margin-bottom:20px; }
+.about-grid p{ color:var(--text-soft); font-size:15.5px; margin-bottom:16px; max-width:520px; }
+.about-grid .placeholder-note{ margin-top:10px; }
+.stat-cards{ display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--line); }
+.stat-cards div{ background:var(--bg); padding:26px 22px; }
+.stat-cards b{ font-family:'Space Grotesk'; font-size:30px; display:block; }
+.stat-cards span{ font-size:12.5px; color:var(--text-soft); }
+@media (max-width:860px){ .about-grid{ grid-template-columns:1fr; gap:36px; } }
+
+.why-c4x{ background:var(--bg-alt); }
+.why-c4x h2{ font-size:clamp(28px,3.4vw,40px); max-width:600px; margin-bottom:36px; }
+.why-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:2px; background:var(--line); margin-bottom:48px; }
+.why-card{ background:var(--bg-alt); padding:26px 28px; }
+.why-card h3{ font-size:17px; margin-bottom:8px; }
+.why-card p{ color:var(--text-soft); font-size:14.5px; line-height:1.55; }
+@media (max-width:720px){ .why-grid{ grid-template-columns:1fr; } }
+
+.compare-table{ overflow-x:auto; border:1px solid var(--line); }
+.compare-table table{ width:100%; border-collapse:collapse; min-width:560px; }
+.compare-table th, .compare-table td{ padding:12px 16px; text-align:left; font-size:14px; border-bottom:1px solid var(--line); }
+.compare-table th{ font-family:'Space Grotesk'; background:var(--surface-dark); color:var(--white); font-weight:600; }
+.compare-table td:first-child{ color:var(--text-soft); font-weight:500; }
+.compare-table td:nth-child(2){ color:var(--accent); font-weight:600; background:rgba(243,194,78,.12); }
+.compare-table tbody tr:last-child td{ border-bottom:none; }
+/* ===========================
+   About CTA Button
+=========================== */
+
+.about-actions {
+  margin-top: 34px;
+}
+
+.cert-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 16px 34px;
+
+  background: linear-gradient(135deg, #d9a441 0%, #c68a1f 100%);
+  color: #ffffff;
+
+  border: none;
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(198, 138, 31, 0.35);
+
+  transition: all 0.35s ease;
+}
+
+.cert-btn span {
+  display: flex;
+  align-items: center;
+}
+
+.cert-btn svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.cert-btn:hover {
+  transform: translateY(-4px);
+
+  background: linear-gradient(135deg, #e6b451 0%, #d79c2b 100%);
+
+  box-shadow: 0 18px 40px rgba(198, 138, 31, 0.45);
+}
+
+.cert-btn:hover svg {
+  transform: translateX(6px);
+}
+
+.cert-btn:active {
+  transform: translateY(-1px);
+}

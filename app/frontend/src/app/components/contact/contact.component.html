@@ -1,0 +1,55 @@
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2>Talk to us, or drop by the plant.</h2>
+
+      <div class="contact-list">
+        <a *ngFor="let phone of phoneNumbers" [href]="phone.tel">
+          <span class="ico">&#9742;</span> {{ phone.display }}
+        </a>
+        <a [href]="'mailto:' + email"><span class="ico">&#9993;</span> {{ email }}</a>
+        <a [href]="'https://www.google.com/maps?q=' + address" target="_blank" rel="noopener"><span class="ico">&#9873;</span> {{ address }}</a>
+        <a [href]="instagram" target="_blank" rel="noopener"><span class="ico">&#9737;</span> &#64;parshwanathc4x</a>
+      </div>
+
+      <div class="map-frame">
+        <iframe [src]="mapEmbedUrl" width="100%" height="100%" style="border:0" loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h3>Send an enquiry</h3>
+      <p class="sub">We'll get back to you on call or WhatsApp.</p>
+
+      <form [formGroup]="form" (ngSubmit)="submit()" *ngIf="!submitted">
+        <div class="field">
+          <label>Full name</label>
+          <input type="text" formControlName="name" />
+        </div>
+        <div class="field">
+          <label>Mobile number</label>
+          <input type="tel" formControlName="mobile" placeholder="10-digit mobile number" />
+        </div>
+        <div class="field">
+          <label>Message</label>
+          <textarea rows="3" formControlName="message" placeholder="Quantity, block size, delivery location..."></textarea>
+        </div>
+        <button type="submit" class="cta-btn" [disabled]="submitting">
+          {{ submitting ? 'Sending…' : 'Send Enquiry' }}
+        </button>
+        <div class="form-msg error" *ngIf="errorMsg">{{ errorMsg }}</div>
+      </form>
+
+      <div class="form-msg success" *ngIf="submitted">
+        Thanks — we've received your enquiry and will reach out shortly.
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="coursing dark">
+  <div class="row">
+    <span *ngFor="let i of [].constructor(15)"></span>
+  </div>
+</div>

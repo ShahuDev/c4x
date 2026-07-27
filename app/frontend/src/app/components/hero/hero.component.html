@@ -1,0 +1,34 @@
+<section class="hero" id="hero-video" #heroSection>
+  <video *ngIf="hasVideo" #plantVideo muted loop playsinline>
+    <source src="assets/video/plant-walkthrough.mp4" type="video/mp4" />
+  </video>
+  <div *ngIf="!hasVideo" class="video-fallback"></div>
+
+  <div class="wrap hero-inner">
+    <div class="hero-tag">Parshwanath C4X AAC Blocks &mdash; Kamptee, Nagpur</div>
+    <h1>Lighter blocks. <em>Stronger</em> builds.</h1>
+    <p>Central India's trusted AAC block manufacturer, delivering lightweight, durable and sustainable autoclaved aerated concrete blocks &mdash; from residential homes to large infrastructure projects.</p>
+    <div class="hero-ctas">
+        <a
+                href="assets/brochure.pdf"
+                download="brochure.pdf"
+                class="cta-btn">
+
+            &#8595; Download Brochure
+
+        </a>
+      <a href="#contact" class="cta-ghost">Get a Quote</a>
+    </div>
+    <div class="hero-stats">
+      <div><b>550&ndash;650</b><span>KG/M&sup3; DRY DENSITY</span></div>
+      <div><b>4&ndash;6</b><span>HRS FIRE RESISTANCE</span></div>
+      <div><b>8</b><span>BLOCK SIZES AVAILABLE</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="coursing dark">
+  <div class="row">
+    <span *ngFor="let i of [].constructor(15)"></span>
+  </div>
+</div>

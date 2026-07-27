@@ -1,0 +1,14 @@
+<section id="plant">
+  <div class="wrap">
+    <div class="gallery-head">
+      <h2>Inside the C4X plant</h2>
+      <p>A look at the manufacturing unit, autoclaving &amp; curing line, and storage yard at Khasra No.81, Maouja, Shirpur, Kamptee, Nagpur.</p>
+    </div>
+    <div class="photo-grid">
+      <div class="ph" *ngFor="let photo of photos" [class.has-img]="photo.src">
+        <img *ngIf="photo.src" [src]="photo.src" [alt]="photo.caption" />
+        <span>{{ photo.caption }}</span>
+      </div>
+    </div>
+  </div>
+</section>
